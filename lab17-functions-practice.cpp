@@ -19,7 +19,19 @@ using namespace std;
     // Ask the user for a score and validate input.
     // Keep asking until the score is between 0 and 100.
     // Return the valid score.
+double getScore()// fucntion for the score 
+{
+    double textscore; // text integer 
+    textscore = -1; // so one of the of statments are true 
 
+    while (textscore < 0 || textscore >100 ) // repeats till user inputs a value number 
+    {
+        cout << "please enter a valid"; // displays this 
+        cin >> textscore; // user input 
+    }
+    return(textscore); // outputs value to main function 
+
+}
 
 
 
@@ -40,7 +52,24 @@ using namespace std;
     // 70–79:  C
     // 60–69:  D
     // Below 60: F
+void displayLetterGrade(double textscore) { // function statement having a parameter textscore which checks the text score 
+    if (textscore >= 90) { // all the if and else statements check the value of the text score the users enter and then one by one check which grade you got and then it will output the grade the correct letter grade. 
+        cout << "A";// output
 
+    }
+    else if (textscore >= 80) {
+        cout << "B";//ouput 
+    }
+    else if (textscore >= 70) {
+        cout << "C";//output 
+    }
+    else if (textscore >= 60) {
+        cout << "D"; //output
+    }
+    else {
+        cout<<"F"; //output 
+    }
+}
 
 
 // You should not need to edit main for your program to run 
